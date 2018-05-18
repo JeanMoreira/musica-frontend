@@ -1,19 +1,21 @@
-<div class="container">
-    <div class="col-md-12">
+
+   
         <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-6">
           <div class="form-group">
               <label for="MusicOrArtist">Music or Artist</label>
-              <input type="text" class="form-control" (keyup) = "topoMusicSearch.emit($event)"/>
+              <input type="text" class="form-control" (keyup) = "topoMusicSearch.emit($event)" style="
+              width: 83%;
+          "/>
           </div>
        </div>
-       <div class="col-md-1"></div>
-       <div class="col-md-5">
+       
+       <div class="col-md-6">
           <div class="form-group">
             <label for="User">User</label>
-            <input type="text" class="form-control" (keyup) = "topoPlaylistSearch.emit($event)"/>
+            <input type="text" class="form-control" (keyup) = "topoPlaylistSearch.emit($event)" style="
+            width: 83%;
+        ">
           </div>
         </div>
-        </div>
-   </div>
-  </div>
+

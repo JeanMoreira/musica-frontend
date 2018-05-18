@@ -19,6 +19,11 @@ export class PlaylistComponent implements OnInit {
   }
 
   checkedMusic(playlistMusicasModel: PlaylistMusicasModel) {
+    // tslint:disable-next-line:max-line-length
+    const obj = this.playlistFilho.playlistMusicas.find(x => x.musica.id !== playlistMusicasModel.musica.id && x.musica.checked === true);
+    if (obj != null) {
+      obj.musica.checked = false;
+    }
     playlistMusicasModel.musica.checked = !playlistMusicasModel.musica.checked;
   }
 
