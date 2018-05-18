@@ -1,10 +1,9 @@
+import { Artista } from './artista.model';
+
 export class Musica {
-    public artista:{
-        id: string
-        nome: string    
-    }            
-    public artistaId: string
-    public id: string
-    public nome: string
+    public id: String;
+    public nome: String;
+    public artista: Artista;
+    public artistaId: String;
     public checked: Boolean;
 }

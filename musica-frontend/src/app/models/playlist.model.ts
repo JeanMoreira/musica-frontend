@@ -1,6 +1,9 @@
-import { Musica } from './musica.model';
-export class Playlist{
-    public musica: Musica
-    public musicaId: string
-    public playlistId: string       
+import { PlaylistMusicasModel } from './PlaylistMusicasModel.model';
+
+
+export class Playlist {
+    public id: string;
+
+    public playlistMusicas: Array<PlaylistMusicasModel>;
 }
+

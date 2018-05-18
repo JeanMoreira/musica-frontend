@@ -1,7 +1,7 @@
-import { PlaylistResponse } from './../models/playlistResponse.model';
-import { Playlist } from './../models/playlist.model';
 import { Component, OnInit, Input, Output } from '@angular/core';
+import { Playlist } from '../models/playlist.model';
 import { Musica } from '../models/musica.model';
+import { PlaylistMusicasModel } from '../models/PlaylistMusicasModel.model';
 
 @Component({
   selector: 'app-playlist',
@@ -12,17 +12,14 @@ export class PlaylistComponent implements OnInit {
 
   constructor() { }
 
-  @Input() playlist: PlaylistResponse
+  @Input() @Output() playlistFilho: Playlist;
 
   ngOnInit() {
-    //console.log(this.playlist)
+    console.log(this.playlistFilho);
   }
 
-  checkedMusic(musica: Musica){
-    this.playlist.playlistMusicas.forEach(element => {
-      element.musica.checked = false      
-    });
-    musica.checked = !musica.checked;
+  checkedMusic(playlistMusicasModel: PlaylistMusicasModel) {
+    playlistMusicasModel.musica.checked = !playlistMusicasModel.musica.checked;
   }
 
 }

@@ -11,12 +11,12 @@ export class ControlesComponent implements OnInit {
   @Output() controleIncluirMusica = new EventEmitter();
   @Output() controleRemoverMusica = new EventEmitter();
 
-  @Input() public musicaListaControle:Musica[]
+  @Input() public musicaListaControle: Musica[];
 
   constructor() { }
 
   ngOnInit() {
-    //console.log(this.musicaListaControle)
+    console.log(this.musicaListaControle);
   }
 
 }
